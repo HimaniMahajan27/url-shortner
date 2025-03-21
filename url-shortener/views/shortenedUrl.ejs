@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>URL Shortened</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>URL Shortened</h1>
+    
+    <div class="success-container">
+      <h2>Your shortened URL is ready!</h2>
+      
+      <div class="url-result">
+        <p class="original-url">
+          <strong>Original URL:</strong> 
+          <a href="<%= shortUrl.full %>" target="_blank">
+            <%= shortUrl.full.length > 50 ? shortUrl.full.substring(0, 50) + '...' : shortUrl.full %>
+          </a>
+        </p>
+        
+        <p class="shortened-url">
+          <strong>Shortened URL:</strong> 
+          <span id="shortUrl" class="highlight-url">
+            <%= `${req.protocol}://${req.get('host')}/${shortUrl.short}` %>
+          </span>
+          <button class="copy-btn" onclick="copyToClipboard()">Copy</button>
+        </p>
+      </div>
+      
+      <div class="actions">
+        <a href="/" class="btn-back">Create Another</a>
+      </div>
+    </div>
+    
+    <footer>
+      <p>&copy; <%= new Date().getFullYear() %> URL Shortener Service</p>
+    </footer>
+  </div>
+  
+  <script>
+    function copyToClipboard() {
+      const text = document.getElementById('shortUrl').textContent.trim();
+      navigator.clipboard.writeText(text)
+        .then(() => {
+          const copyBtn = document.querySelector('.copy-btn');
+          copyBtn.textContent = 'Copied!';
+          setTimeout(() => {
+            copyBtn.textContent = 'Copy';
+          }, 2000);
+        })
+        .catch(err => console.error('Error copying text:', err));
+    }
+  </script>
+</body>
+</html>

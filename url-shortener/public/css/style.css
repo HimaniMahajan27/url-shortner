@@ -1,0 +1,163 @@
+/* General Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to right, #ecd9de, #f5ebe8);
+    color: #4a4a4a;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Glassmorphic Container */
+.container {
+    max-width: 1000px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.1);
+    background-color: #f2d3da;
+}
+
+/* Heading - URL Shortener (NO Animation) */
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: #ff758c;
+    text-shadow: 3px 3px 12px rgba(255, 117, 140, 0.5);
+    margin-bottom: 30px;
+}
+
+/* Subheading - "Your Shortened URLs" (Larger Size) */
+h2 {
+    font-size: 50px;
+    font-weight: 600;
+    color: #ff758c;
+    margin-top: 40px;
+}
+
+/* Input and Button Styling */
+input, button {
+    font-size: 28px;
+    padding: 20px;
+    margin: 20px 0;
+    width: 90%;
+    border-radius: 15px;
+    border: none;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+/* Input Field */
+input {
+    background: rgba(255, 255, 255, 0.5);
+    color: #333;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Button */
+button {
+    background: linear-gradient(to right, #db5e62, #eaa795);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 7px 20px rgba(255, 117, 140, 0.5);
+    width: 500px;
+}
+
+button:hover {
+    background: linear-gradient(to right, #e4ad9e, #e36b6f);
+    transform: scale(1.05);
+}
+
+/* Shortened URL Display Box (Larger) */
+.shortened-url {
+    font-size: 30px;
+    padding: 20px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    display: block;
+    word-break: break-word;
+    color: #ff758c;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+/* Making Everything Look Bigger */
+.big-box {
+    width: 95%;
+    padding: 30px;
+    font-size: 32px;
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 8px 25px rgba(0, 0, 0, 0.2);
+}
+/* Table Container */
+.table-container {
+    width: 100%;
+    margin-top: 50px;
+    overflow-x: auto;
+}
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 28px; /* Bigger text */
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Table Header */
+th {
+    background: linear-gradient(to right, #ff9a9e, #fad0c4);
+    color: white;
+    font-weight: bold;
+    padding: 25px;
+    text-align: center;
+    font-size: 30px; /* Bigger header */
+}
+
+/* Table Data */
+td {
+    padding: 20px;
+    text-align: center;
+    font-size: 28px; /* Bigger font */
+    color: #4a4a4a;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Clickable Short URLs */
+.short-url a {
+    text-decoration: none;
+    color: #ff758c;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.short-url a:hover {
+    color: #e91e63;
+    transform: scale(1.1);
+}
+
+/* Last Row Border Removal */
+tr:last-child td {
+    border-bottom: none;
+}
+
+/* Clicks Column */
+.clicks {
+    font-weight: bold;
+    color: #ff758c;
+}
